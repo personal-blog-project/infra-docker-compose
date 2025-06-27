@@ -17,6 +17,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Make deploy script executable
+        run: chmod +x scripts/deploy-infra.sh
+
       - name: Write SSH key
         run: |
           echo "${{ secrets.SERVER_SSH_KEY }}" > private_key
