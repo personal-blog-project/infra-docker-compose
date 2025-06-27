@@ -23,7 +23,7 @@ jobs:
           chmod 600 private_key
 
       - name: Deploy
-        run: ./deploy.sh
+        run: scripts/deploy-infra.sh
         env:
           SERVER_IP: ${{ secrets.SERVER_IP }}
           SERVER_USER: ${{ secrets.SERVER_USER }}
