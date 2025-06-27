@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: SSH deploy to server
-        if: ${{ secrets.SERVER_IP != '' }}
+        if: ${{ secrets.SERVER_IP != 'none' }}
         uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.SERVER_IP }}
