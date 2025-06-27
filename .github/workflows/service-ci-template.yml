@@ -47,7 +47,7 @@ jobs:
             exit 0
           fi
           ssh -o StrictHostKeyChecking=no -i private_key "$SERVER_USER@$SERVER_IP" "
-            cd /home/your-user/infra-docker-compose &&
+            cd /home/st120712/infra-docker-compose &&
             git pull &&
             ./scripts/deploy-service.sh ${{ inputs.service_name }}
           "

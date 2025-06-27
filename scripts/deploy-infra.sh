@@ -4,7 +4,7 @@ if [ "$SERVER_IP" = "none" ] || [ -z "$SERVER_IP" ]; then
   exit 0
 fi
 ssh -i "$SERVER_SSH_KEY" "$SERVER_USER@$SERVER_IP" << EOF
-cd /path/to/infra-docker-compose
+cd /home/st120712/infra-docker-compose
 git pull
 docker-compose pull
 docker-compose up -d
