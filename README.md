@@ -33,18 +33,18 @@ infra-docker-compose/
 ## ⚡ 주요 명령
 전체 인프라 배포
 ```bash
-  ./scripts/deploy-infra.sh
+./scripts/deploy-infra.sh
 ```
 
 개별 서비스 배포
 ```bash
-  ./scripts/deploy-service.sh <서비스명>
+./scripts/deploy-service.sh <서비스명>
 ```
 
 Docker Compose 수동 실행
 ```bash
-  docker-compose pull
-  docker-compose up -d
+docker-compose pull
+docker-compose up -d
 ```
 
 ---
