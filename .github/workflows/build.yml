@@ -14,10 +14,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Write SSH key
         run: |
           echo "${{ secrets.SERVER_SSH_KEY }}" > private_key
           chmod 600 private_key
+
       - name: Deploy
         run: ./deploy.sh
         env:
