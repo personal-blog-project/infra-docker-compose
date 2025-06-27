@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  eureka-server:
+    image: ghcr.io/personal-blog-project/eureka-server:latest
+    ports:
+      - "${EUREKA_SERVER_PORT}:${EUREKA_SERVER_PORT}"
+    environment:
+      - EUREKA_SERVER_PORT=${EUREKA_SERVER_PORT}
