@@ -10,10 +10,10 @@ if [ -z "$SERVICE" ]; then
 fi
 
 echo "✅ Pulling latest image for $SERVICE..."
-docker-compose pull $SERVICE
+docker compose pull $SERVICE
 
 echo "✅ Restarting $SERVICE..."
-docker-compose up -d $SERVICE
+docker compose up -d $SERVICE
 
 echo "✅ Cleaning up dangling images..."
 docker image prune -f
