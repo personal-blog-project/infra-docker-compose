@@ -15,5 +15,8 @@ docker compose pull $SERVICE
 echo "✅ Restarting $SERVICE..."
 docker compose up -d $SERVICE
 
+echo "✅ Cleaning up dangling containers..."
+docker container prune -f
+
 echo "✅ Cleaning up dangling images..."
 docker image prune -f
